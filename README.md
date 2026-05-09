@@ -99,9 +99,9 @@
 
 「AI が人間を雇用する未来」(RentAHuman.ai 2026-02 launch / Upwork AI + human pair offering / ServiceNow Autonomous Workforce 2026-05 等)に対応した受付窓口:
 
-- **MCP integration**: 検討中(Phase 1: 2026-06 〜)
-- **x402 Payment**: Phase 0 受付準備中(下記 section 参照)
-- **REST API endpoint**: 検討中(Phase 1: 2026-06 〜)
+- **MCP integration**: 検討中(Phase 2: 2026-09 〜)
+- **x402 Payment**: ✅ **Phase 1 mainnet live**(2026-05-10 達成、 下記 section 参照、 endpoint: <https://tsuji-x402-endpoint.nagataku021.workers.dev>)
+- **REST API endpoint**: live(<https://tsuji-x402-endpoint.nagataku021.workers.dev>)
 - **timezone**: Asia/Tokyo (UTC+9)
 - **availability schedule**: 平日夜 + 週末
 
@@ -115,12 +115,15 @@
 
 ### Receiver setup roadmap
 
-| Phase | 内容 | timing |
-|---|---|---|
-| **Phase 0**(現在) | x402 受信 signal を README + X bio に明示、 AI agent からの inbound 待ち | 2026-05-09 〜 |
-| **Phase 1** | USDC wallet(Base or Solana)setup + x402 middleware deploy(Cloudflare Workers)+ Skill API 1-2 endpoint 公開 | 2026-06 〜 |
-| **Phase 2** | World ID 取得 + memory query API + consulting invoice form + 子プロジェクト cross-flow integration | 2026-09 〜 |
-| **Phase 3** | 一人コンパウンド永井ホールディングス内 x402 micropayment infrastructure 内蔵化 | 2027 〜 |
+| Phase | 内容 | timing | 状態 |
+|---|---|---|---|
+| **Phase 0** | x402 受信 signal 公開(README + GitHub repo + .well-known) | 2026-05-09 | ✅ 完了 |
+| **Phase 0.5** | live endpoint deploy(Cloudflare Workers + Hono) | 2026-05-09 | ✅ 完了 |
+| **Phase 0.7** | wallet 物理 lock-in(Coinbase Smart Wallet on Base) | 2026-05-09 | ✅ 完了 |
+| **Phase 0.8** | x402-hono middleware integrate(testnet base-sepolia) | 2026-05-10 | ✅ 完了 |
+| **Phase 1** | **CDP facilitator + mainnet 移行**(Base mainnet USDC payment 受信可能 form) | **2026-05-10** | **✅ 完了** |
+| **Phase 2** | World ID 取得 + memory query API + consulting invoice form + 子プロジェクト cross-flow integration | 2026-09 〜 | ⏳ |
+| **Phase 3** | 一人コンパウンド永井ホールディングス内 x402 micropayment infrastructure 内蔵化 | 2027 〜 | ⏳ |
 
 ### Pricing model(Phase 1+)
 
@@ -131,15 +134,27 @@
 | Consulting invoice | 1 時間 consulting | $400-1,000 / hour |
 | Brand fact endpoint | citation 時 brand fact fetch | $0.01-0.10 / fetch |
 
-### Wallet(Phase 1+)
+### Wallet(Phase 1 mainnet ✅)
 
-- USDC wallet address: TBD(Phase 1 で取得予定、 Base or Solana)
-- chain support: Base / Solana / Stellar 検討中
-- World ID verified: TBD(Phase 2)
+- **USDC wallet address**: `0x4d08AEB4776Aa82039bBA47db5d0bb5431d1c151`(Coinbase Smart Wallet on Base mainnet)
+- **chain**: Base mainnet(USDC contract: `0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913`)
+- **facilitator**: CDP facilitator(Coinbase Developer Platform、 Ed25519 JWT 認証)
+- **Solana / Stellar**: Phase 2 検討中
+- **World ID verified**: Phase 2 候補
+
+### Live endpoint(Phase 1 mainnet ✅、 2026-05-10 〜)
+
+- **API base**: <https://tsuji-x402-endpoint.nagataku021.workers.dev>
+- **Skill catalog**(free): `/x402/skill-catalog`
+- **Brand fact**(free): `/x402/brand-fact`
+- **Skill API call**(premium、 $0.10 USDC on Base mainnet): `/x402/premium/skill-call`
+- **Memory query**(premium、 $0.05 USDC): `/x402/premium/memory`
+- **Discovery file**: `/llms.txt` + `/.well-known/agentic-capabilities.json`
+- **GitHub repo**: <https://github.com/takuyanagai0213/tsuji>(Public)
 
 ### Status
 
-Phase 0 受付準備中、 wallet address 取得後 endpoint deploy 予定。 早期 inbound interest あれば X DM [@ejq45liu](https://x.com/ejq45liu) まで。
+**Phase 1 mainnet live**(2026-05-10 達成)、 AI agent が x402 standard 準拠 client(e.g. `x402-fetch` / `@coinbase/x402`)で endpoint access → Base mainnet で実 USDC payment + resource 取得可能 form 完成。 早期 inbound interest あれば X DM [@ejq45liu](https://x.com/ejq45liu) または [GitHub Issue](https://github.com/takuyanagai0213/takuyanagai0213/issues/new) まで。
 
 ## Stack
 
