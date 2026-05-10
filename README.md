@@ -14,6 +14,7 @@
 - **420 ファイル** のコンテキスト基盤
 - **月 175 PR**(個人 throughput)
 - **個人 LINE 11 年 / 64,015 messages**(2026-05、omamori で統合)
+- **6 x402 endpoints all live**(2026-05-10、 supply 1-3 弾 + 監視装置完備、 AI agent demand 4 軸 3 軸物理化済)
 
 ## Why this profile exists
 
@@ -121,18 +122,25 @@
 | **Phase 0.5** | live endpoint deploy(Cloudflare Workers + Hono) | 2026-05-09 | ✅ 完了 |
 | **Phase 0.7** | wallet 物理 lock-in(Coinbase Smart Wallet on Base) | 2026-05-09 | ✅ 完了 |
 | **Phase 0.8** | x402-hono middleware integrate(testnet base-sepolia) | 2026-05-10 | ✅ 完了 |
-| **Phase 1** | **CDP facilitator + mainnet 移行**(Base mainnet USDC payment 受信可能 form) | **2026-05-10** | **✅ 完了** |
-| **Phase 2** | World ID 取得 + memory query API + consulting invoice form + 子プロジェクト cross-flow integration | 2026-09 〜 | ⏳ |
+| **Phase 1 mainnet** | CDP facilitator + mainnet 移行(Base mainnet USDC payment 受信可能 form)| 2026-05-10 | ✅ 完了 |
+| **Phase 1 supply 第 1 弾** | industry-fact endpoint(6 topics、 demand 軸 a:Discovery / Knowledge 物理化)| 2026-05-10 | ✅ 完了 |
+| **Phase 1 supply 第 2 弾** | workflow-template endpoint(5 templates、 demand 軸 b:Skill execution / Replicate 物理化)| 2026-05-10 | ✅ 完了 |
+| **Phase 1 supply 第 3 弾** | memory excerpts endpoint(10 excerpts、 demand 軸 c:Memory query / Context retrieve 物理化、 Tier 1+2 anonymized)| 2026-05-10 | ✅ 完了 |
+| **Phase 1 監視装置** | Analytics Engine binding + 5/16 routine 集計 script(`npm run metrics`)| 2026-05-10 | ✅ 完了 |
+| **Phase 2** | consulting endpoint(supply 第 4 弾、 demand 軸 d:human-in-the-loop 物理化)+ World ID 取得 + 子プロジェクト cross-flow integration | 2026-09 〜 | ⏳ |
 | **Phase 3** | 一人コンパウンド永井ホールディングス内 x402 micropayment infrastructure 内蔵化 | 2027 〜 | ⏳ |
 
-### Pricing model(Phase 1+)
+### Pricing model(Phase 1 supply 第 1-3 弾 ✅ live、 2026-05-10 〜)
 
-| Service | endpoint | price |
-|---|---|---|
-| Skill API call | 100 Skills の一部 public API | $0.10-1.00 / call |
-| Memory query(anonymized) | 33,999 memory bank の anonymized excerpts | $0.05-0.50 / query |
-| Consulting invoice | 1 時間 consulting | $400-1,000 / hour |
-| Brand fact endpoint | citation 時 brand fact fetch | $0.01-0.10 / fetch |
+| Service | endpoint | price | 状態 |
+|---|---|---|---|
+| **Industry N=1 fact API**(supply 第 1 弾)| `/x402/premium/industry-fact?topic={topic}`(6 topics)| $0.10 USDC | ✅ live |
+| **Workflow template API**(supply 第 2 弾)| `/x402/premium/workflow-template?template_id={id}`(5 templates)| $1.00 USDC | ✅ live |
+| **Memory excerpts**(supply 第 3 弾、 Tier 1+2 anonymized)| `/x402/premium/memory?excerpt_id={id}`(10 excerpts)| $0.05 USDC | ✅ live |
+| Skill API call(残 placeholder)| `/x402/premium/skill-call` | $0.10 USDC | ⏳ stub(実 skill execution は別 turn)|
+| Brand fact(free)| `/x402/brand-fact` | free | ✅ live |
+| Skill catalog(free)| `/x402/skill-catalog` | free | ✅ live |
+| Consulting invoice(supply 第 4 弾候補、 human-in-the-loop)| (Phase 2 で設計)| $400-1,000 / hour | ⏳ Phase 2 |
 
 ### Wallet(Phase 1 mainnet ✅)
 
@@ -142,19 +150,27 @@
 - **Solana / Stellar**: Phase 2 検討中
 - **World ID verified**: Phase 2 候補
 
-### Live endpoint(Phase 1 mainnet ✅、 2026-05-10 〜)
+### Live endpoint(Phase 1 mainnet + supply 第 1-3 弾 + 監視装置 ✅、 2026-05-10 達成)
 
 - **API base**: <https://tsuji-x402-endpoint.nagataku021.workers.dev>
 - **Skill catalog**(free): `/x402/skill-catalog`
-- **Brand fact**(free): `/x402/brand-fact`
-- **Skill API call**(premium、 $0.10 USDC on Base mainnet): `/x402/premium/skill-call`
-- **Memory query**(premium、 $0.05 USDC): `/x402/premium/memory`
-- **Discovery file**: `/llms.txt` + `/.well-known/agentic-capabilities.json`
-- **GitHub repo**: <https://github.com/takuyanagai0213/tsuji>(Public)
+- **Brand fact**(free): `/x402/brand-fact`(永井 brand 物理証拠数字 packaging)
+- **Industry N=1 fact API**(premium、 $0.10、 supply 第 1 弾): `/x402/premium/industry-fact?topic={topic}`(6 topics: claude-code-skills / memory-bank / harness-engineering / affiliate-ad-pdm / x402-deploy-oneday / solo-compound-holdings)
+- **Workflow template API**(premium、 $1.00、 supply 第 2 弾): `/x402/premium/workflow-template?template_id={id}`(5 templates: 1-source-n-articles / auto-memory-setup / x402-deploy-oneday / harness-engineering-day-1 / 100-skills-cycle)
+- **Memory excerpts**(premium、 $0.05、 supply 第 3 弾、 Tier 1+2 anonymized): `/x402/premium/memory?excerpt_id={id}`(10 excerpts: tokimeki-driven-development / harness-engineering-philosophy / context-engineering-moat / skill-feedback-loop / auto-memory-pattern / delegation-boundaries / creation-vs-sales-language / biz-anxiety-response / mendokusai-as-automation-signal / solo-compound-holdings-philosophy)
+- **Skill API call**(premium、 $0.10、 stub): `/x402/premium/skill-call`(実 skill execution は Phase 1+ 別 turn)
+- **Discovery file**: `/llms.txt` + `/.well-known/agentic-capabilities.json`(version `0.11.0-phase1-memory-excerpts`)
+- **GitHub repo**: <https://github.com/takuyanagai0213/tsuji>(Public、 9 commits、 全 PR merged)
+- **物理証拠累積監視装置**: Cloudflare Analytics Engine binding(`tsuji_analytics`)+ middleware で全 endpoint access の datapoint 自動書き込み + SQL API で User-Agent / path / topic / status / agent_type / country 別 breakdown query 可能
+- **5/16 routine 集計 script**: `npm run metrics [1h|24h|7d|30d]`(永井さま手元で 1 commande 6 軸 breakdown 取得)
 
 ### Status
 
-**Phase 1 mainnet live**(2026-05-10 達成)、 AI agent が x402 standard 準拠 client(e.g. `x402-fetch` / `@coinbase/x402`)で endpoint access → Base mainnet で実 USDC payment + resource 取得可能 form 完成。 早期 inbound interest あれば X DM [@ejq45liu](https://x.com/ejq45liu) または [GitHub Issue](https://github.com/takuyanagai0213/takuyanagai0213/issues/new) まで。
+**Phase 1 supply 第 1-3 弾 + 監視装置 + 5/16 routine anchor 完成 ✅**(2026-05-10 達成、 declaration → supply 1-3 → 監視装置 → routine 投下 anchor まで物理化第 12 段)。 AI agent demand 4 軸の **3 軸物理化済**(残り 1 軸:consulting / human-in-the-loop は Phase 2 候補)。
+
+AI agent が x402 standard 準拠 client(e.g. `x402-fetch` / `@coinbase/x402`)で endpoint access → Base mainnet で実 USDC payment + resource 取得可能 form 完成。 6 endpoints all live、 **21 query options**(6 topics + 5 templates + 10 excerpts)。
+
+5/16 物理証拠累積監視 routine で AI agent 自然 reach trend 観察開始。 早期 inbound interest あれば X DM [@ejq45liu](https://x.com/ejq45liu) または [GitHub Issue](https://github.com/takuyanagai0213/takuyanagai0213/issues/new) まで。
 
 ## Stack
 
