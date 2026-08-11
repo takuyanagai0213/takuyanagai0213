@@ -53,19 +53,22 @@
 
 ## Available for Hire
 
-業務委託受付中(2026-05-09〜)。 現職継続 + 並走 form、 月 1-3 案件まで対応可能です。
+業務委託受付中です。現職と並行のため、**定例やレビュー等の同期点は平日 19 時以降または土日**に置ける案件を希望します。
+一方で**稼働量そのものに上限は設けていません** ── 非同期中心(ドキュメントと PR ベース)で進められる案件であれば、週 5 日相当まで対応できます。
 
 ### What you hire
 
 雇う対象は永井個人ではなく、 **「永井 + AI エージェント群(Claude Code 100 Skills / 33,999 memory)」 のセットシステム** です。 1 年積層の AI ハーネス + コンテキストエンジニアリング moat により、 通常の 1/5-1/10 工数で同単価の案件を完了します。 client は 1 年後 / 3 年後の人類 baseline scenario の先行実装に participate する form でもあります。
 
-### Pricing
+### 稼働条件
 
-| 案件規模 | 想定単価 | 工数(AI ハーネス効率込) |
-|---|---|---|
-| 1 案件 | 月 80 万 | 月 8-20h |
-| 2 案件並走 | 月 160 万 | 月 16-40h |
-| 3 案件並走 | 月 240 万 | 月 24-60h |
+| 項目 | 条件 |
+|---|---|
+| **稼働** | **週 1〜5 日。総量に上限は設けていません** |
+| **実際の制約** | **同期点(定例・レビュー)を平日 19 時以降か土日に置けること** |
+| **単価** | 時給 5,000 円以上 / 月額 88 万を目安(週日数・スコープにより調整) |
+| **形態** | フルリモート、業務委託(準委任)。非同期中心 |
+| **開始** | 応相談 / 即可 |
 
 ### 得意領域
 
@@ -82,17 +85,16 @@
 
 | 取る | 取らない |
 |---|---|
-| 週 16h 以内 / 月 60h 以内 | フルタイム常駐 |
+| **週 1〜5 日(総量の上限なし)** | **平日日中の常時待機・即時応答が必須** |
 | 非同期コミュニケーション中心 | 毎日 MTG 必須 |
-| TypeScript / GCP / データ基盤 / AI Agent | レガシー Java 保守 |
+| TypeScript / GCP / データ基盤 / AI Agent | オフィス出社必須 |
 | 3 ヶ月以内の期間 / 延長可 | 無期限の準委任 |
-| リモート完結 | オフィス出社必須 |
+| **同期点を平日 19 時以降か土日に置ける** | **同期点が平日日中に固定** |
 | **b 系**(DSP / メディア buying / 計測 product / SaaS / AI 導入支援) | **a 系**(アフィリエイト広告、 競業避止) |
 
 ### Reach(Human Clients)
 
-1. **X DM**: [@ejq45liu](https://x.com/ejq45liu)
-2. **GitHub Issue**: [Issue 立てる](https://github.com/takuyanagai0213/takuyanagai0213/issues/new)
+- **GitHub Issue**: [Issue 立てる](https://github.com/takuyanagai0213/takuyanagai0213/issues/new)
 
 詳細業務経歴書(プロジェクト別 stack / 成果 / 稼働条件)は別途お渡し可能です。
 
@@ -170,7 +172,7 @@
 
 AI agent が x402 standard 準拠 client(e.g. `x402-fetch` / `@coinbase/x402`)で endpoint access → Base mainnet で実 USDC payment + resource 取得可能 form 完成。 6 endpoints all live、 **21 query options**(6 topics + 5 templates + 10 excerpts)。
 
-5/16 物理証拠累積監視 routine で AI agent 自然 reach trend 観察開始。 早期 inbound interest あれば X DM [@ejq45liu](https://x.com/ejq45liu) または [GitHub Issue](https://github.com/takuyanagai0213/takuyanagai0213/issues/new) まで。
+5/16 物理証拠累積監視 routine で AI agent 自然 reach trend 観察開始。 早期 inbound interest あれば [GitHub Issue](https://github.com/takuyanagai0213/takuyanagai0213/issues/new) まで。
 
 ## Stack
 
